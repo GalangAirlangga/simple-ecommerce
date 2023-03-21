@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "2314857e-6440-4399-97a6-ed7ccbc515c9",
+		"name": "Simple Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4548057"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/customer",
+					"protocol": "http",
+					"host": [
+						"simple-ecommerce",
+						"test"
+					],
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"simple-ecommerce",
+						"test"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/payment-method",
+					"protocol": "http",
+					"host": [
+						"simple-ecommerce",
+						"test"
+					],
+					"path": [
+						"api",
+						"payment-method"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": \"1\",\r\n    \"customer_address_id\": \"1\",\r\n    \"products\": [\r\n        {\r\n            \"product_id\": \"1\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": \"2\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"payment_methods\": [\r\n        {\r\n            \"payment_method_id\": \"1\",\r\n            \"amount\": 10000\r\n        },\r\n        {\r\n            \"payment_method_id\": \"2\",\r\n            \"amount\": 5000\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"simple-ecommerce",
+						"test"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
